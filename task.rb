@@ -106,8 +106,8 @@ def q11
 
   # 以下に回答を記載
   # sports.uniq!(&:first)
-  flatten_sports = sports.flatten.uniq!
-  flatten_sports.each.with_index(1) do |sport,i|
+  sports = sports.flatten.uniq!
+  sports.each.with_index(1) do |sport,i|
     puts "No#{i} #{sport}"
   end
 end
