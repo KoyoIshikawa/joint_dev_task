@@ -106,10 +106,17 @@ def q11
 
   # 以下に回答を記載
   # sports.uniq!(&:first)
-  sports = sports.flatten.uniq!
+  sports.flatten!.uniq!
   sports.each.with_index(1) do |sport,i|
     puts "No#{i} #{sport}"
   end
+  # 破壊的メソッド実験
+  # p sports.flatten!
+  # p sports
+  # sports.flatten.uniq
+  # p sports
+  # sports.flatten!.uniq!
+  # p sports
 end
 
 def q12
