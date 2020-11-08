@@ -150,8 +150,20 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  
+  def key_judge(data)
+    if data.key?(:age)
+      puts "Ok"
+    else
+      puts  "NG"     
+    end
+  end
+  
+  key_judge(data1)
+  key_judge(data2)
 end
+
+
 
 def q16
   users = [
