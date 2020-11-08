@@ -152,13 +152,8 @@ def q15
   # 以下に回答を記載
   
   def key_judge(data)
-    if data.key?(:age)
-      puts "Ok"
-    else
-      puts  "NG"     
-    end
+    puts data.key?(:age) ? "OK" : "NG"
   end
-
   key_judge(data1)
   key_judge(data2)
 end
