@@ -153,6 +153,7 @@ def q15
   
   def key_judge(data)
     puts data.key?(:age) ? "OK" : "NG"
+    #puts "ok" if data.key?(:age)
   end
   key_judge(data1)
   key_judge(data2)
@@ -176,6 +177,20 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+  end
+
+  def info
+    puts <<~TASK
+    名前：#{@name}
+    年齢：#{@age}
+    性別：#{@gender}
+    TASK
+
+  end
 
 end
 
